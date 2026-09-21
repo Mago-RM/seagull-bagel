@@ -27,6 +27,12 @@ public class GameManager : MonoBehaviour
     public GameObject endPanel;
     public TMP_Text endText;
 
+    // Tutorial Panel
+    public GameObject tutorialPanel;
+
+    //Credit Panel
+    public GameObject creditsPanel;
+
     //NextLevelPanel
     public GameObject levelTransitionPanel;
     public TMP_Text transitionText;
@@ -197,6 +203,30 @@ public class GameManager : MonoBehaviour
         gameOverText.gameObject.SetActive(true);
         gameOverText.text = "YOU BEAT THE GAME!\n\nThanks for playing!";
 
+    }
+
+    public void StartTutorial()
+    {
+        tutorialPanel.SetActive(true);
+        startPanel.SetActive(false);
+    }
+
+    public void CloseTutorial()
+    {
+        tutorialPanel.SetActive(false);
+        startPanel.SetActive(true);
+    }
+
+     public void StartCredits()
+    {
+        creditsPanel.SetActive(true);
+        startPanel.SetActive(false);
+    }
+
+    public void CloseCredits()
+    {
+        creditsPanel.SetActive(false);
+        startPanel.SetActive(true);
     }
 }
 
